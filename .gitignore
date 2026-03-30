@@ -42,3 +42,5 @@
 /.vs
 /UI/x64/Debug
 /UI/x64/Release
+/MaxLib/x64
+/x64/Debug

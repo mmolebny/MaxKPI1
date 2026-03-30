@@ -3,6 +3,7 @@
 #include "pch.h"
 #include "Resource.h"
 #include "MainDlg.h"
+#include "MaxLib.h"
 
 //***************************************************************************************
 
@@ -33,6 +34,8 @@ BOOL MainDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);
 
 	// TODO: Add extra initialization here
+
+  auto array = GenerateArray(10, 1, 100);
 
 	return TRUE;
 }
