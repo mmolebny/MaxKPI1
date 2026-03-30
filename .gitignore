@@ -41,3 +41,4 @@
 *.dwo
 /.vs
 /UI/x64/Debug
+/UI/x64/Release
