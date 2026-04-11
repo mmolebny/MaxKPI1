@@ -9,21 +9,17 @@ class UIApp : public CWinApp
 {
 public:
 
-	virtual BOOL InitInstance();
+	BOOL InitInstance() final
+	{
+		CWinApp::InitInstance();
+
+		MainDlg dlg;
+		m_pMainWnd = &dlg;
+		dlg.DoModal();
+
+		return FALSE;
+	}
 };
-
-//***************************************************************************************
-
-BOOL UIApp::InitInstance()
-{
-	CWinApp::InitInstance();
-
-	MainDlg dlg;
-	m_pMainWnd = &dlg;
-	dlg.DoModal();
-
-	return FALSE;
-}
 
 //***************************************************************************************
 

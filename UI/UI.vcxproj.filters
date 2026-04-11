@@ -10,7 +10,6 @@
     <ClInclude Include="pch.h" />
     <ClInclude Include="MainDlg.h" />
     <ClInclude Include="Resource.h" />
-    <ClInclude Include="UI.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
