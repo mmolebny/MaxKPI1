@@ -1,42 +1,37 @@
 //***************************************************************************************
 
 #include "pch.h"
-#include "FiboGenerator.h"
+#include "Stack.h"
 
 //***************************************************************************************
 
-FiboGenerator::FiboGenerator()
+Stack::Stack(size_t maxSize) : m_maxSize(maxSize)
 {
-  std::srand((unsigned int)std::time(nullptr));
+  m_data.reserve(maxSize);
 }
 
 //***************************************************************************************
 
-Fibo FiboGenerator::New()
+bool Stack::Push(const Node& node)
 {
-  Fibo item;
+  if (m_data.size() == m_maxSize) return false;
 
-  item.m_key = (uint32_t)std::rand() % 94;
+  m_data.push_back(node);
 
-  item.m_value = GetFibonacci(item.m_key);
-
-  return item;
+  return true;
 }
 
 //***************************************************************************************
 
-uint64_t FiboGenerator::GetFibonacci(uint32_t n)
+bool Stack::Pop(Node& node)
 {
-  if (n == 0) return 0;
-  if (n == 1) return 1;
-  uint64_t a = 0, b = 1, c = 0;
-  for (uint32_t i = 2; i <= n; ++i)
-  {
-    c = a + b;
-    a = b;
-    b = c;
-  }
-  return c;
+  if (m_data.empty()) return false;
+
+  node = m_data[m_data.size() - 1];
+
+  m_data.pop_back();
+
+  return true;
 }
 
 //***************************************************************************************

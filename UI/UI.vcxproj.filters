@@ -11,11 +11,13 @@
     <ClInclude Include="MainDlg.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="ChildWnd.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="MainDlg.cpp" />
     <ClCompile Include="pch.cpp" />
     <ClCompile Include="UI.cpp" />
+    <ClCompile Include="ChildWnd.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="UI.rc">
